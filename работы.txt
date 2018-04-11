@@ -1,0 +1,84 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+ //автобус и мосты
+void main()
+{
+	system("chcp 1251");
+	system("cls");
+	ifstream avtob;
+	avtob.open("C:\\1\\1.txt");
+	int x;
+	avtob >> x;
+	int *mas = new int[x];
+	for (int i = 0;i < x; i++)
+	{
+		avtob >> mas[i];
+		if (mas[i] <= 437)
+			cout << "Авария на" << i+1 << " мосте" << endl;
+		else
+			cout << "Проходит" << endl;
+	}
+	system("pause");
+}
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+ 
+void main()
+{
+	system("chcp 1251");
+	system("cls");
+	int a, b, kof = 0;
+	cin >> a >> b;
+	double x = 0,y = pow(10, b - 1);
+	for (int i = 1;i <= b;i++)
+	{
+		if (a < 10)
+		{
+			x + a*(pow(10, b - i));
+			y = y + (a - 1)*pow(10, kof);
+			break;
+		}
+		else
+		{
+			a = a - 9;
+			x = x+9*(pow(10, b - i));
+			y = y + 9 * pow(10, kof);
+			kof++;
+		}
+	}
+	cout<<
+	system("pause");
+}
+Часы
+#include <iostream>
+#include <fstream>
+#include <math.h>
+using namespace std;
+ 
+void main()
+{
+	system("chcp 1251");
+	system("cls");
+	int h,m,h1,m1,result = 0;
+	cin >> h >> m >> h1 >> m1;
+	while (1) 
+	{
+		if (m == 0) 
+			result += h > 12 ? h - 12 : h == 0 ? 12 : h;
+		else if (m == 30) 
+			result++;
+		if (h == h1 && m == m1) 
+			break;
+		m++;
+		if (m == 60) 
+		{
+			m = 0;
+			h++;
+		}
+	}
+	cout << result<<"-Ударо"<< endl;
+	system("pause");
+}
